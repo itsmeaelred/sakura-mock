@@ -1,0 +1,31 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <div  fxFlex="25" fxLayout = "column">
+        <mat-card>   
+            <mat-toolbar color="primary">
+                <span>口座情報登録</span>
+            </mat-toolbar>
+            <form fxLayoutAlign="stretch" fxLayout ="column" class="registration-form" [formGroup]="formGroup" 
+            (ngSubmit)="registerUser()">
+                <mat-form-field>
+                <input matInput placeholder="First Name" formControlName="firstname">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Last Name" formControlName="lastname">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="email" placeholder="Email" formControlName="email">
+                </mat-form-field>
+                <mat-form-field>
+                <input matInput placeholder="Gender" formControlName="gender">
+                </mat-form-field>
+                <mat-form-field>
+                <input matInput type="password" placeholder="Password" formControlName="password">
+                </mat-form-field>
+                <button mat-stroked-button color="primary" type="submit">会員登録</button>
+            </form>
+        </mat-card>
+        <mat-card fxLayoutAlign="stretch">
+            <button fxFlexFill mat-stroked-button color="accent" (click)="logoutProcess()">ログアウト</button>
+        </mat-card>
+    </div>
+</div>

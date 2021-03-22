@@ -1,0 +1,13 @@
+.main-div mat-card{
+    padding: 0px;
+}
+
+.main-div mat-card-footer{
+    margin: 2px;
+    color:silver;
+    font-size: 70%;
+}
+
+.login-form{
+    padding: 20px;
+}
