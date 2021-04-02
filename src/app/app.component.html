@@ -1,1 +1,11 @@
-<router-outlet></router-outlet>
+<nav>
+    <ul class="main-nav">
+      <li><a [routerLink]="['/']">Angular AWS Amplify</a></li>
+      <li><a [routerLink]="['/']">ホーム</a></li>
+      <!-- <li *ngIf="!(auth.loggedIn | async)"><a [routerLink]="['/login']">ログイン</a></li>
+      <li *ngIf="(auth.loggedIn | async)"><a (click)="onClickLogout()">ログアウト</a></li> -->
+      <li><a [routerLink]="['/signup']">登録</a></li>
+    </ul>
+  </nav>
+
+  <router-outlet></router-outlet>

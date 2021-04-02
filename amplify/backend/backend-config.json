@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "sakuramockf366f5b3": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

@@ -3,25 +3,17 @@
       <mat-toolbar color="primary">
           <span>OCR基盤システム ー Sakura-Eye</span>
       </mat-toolbar>
-      <form fxLayoutAlign="stretch" fxLayout ="column" class="login-form" [formGroup]="formGroup">
-        <!-- <form fxLayoutAlign="stretch" fxLayout ="column" class="login-form" [formGroup]="formGroup" 
-        (ngSubmit)="loginProcess()"> -->
-          <mat-form-field appearance="fill">
-            <mat-label>グループ名</mat-label>
-            <mat-select>
-              <mat-option> --OCR基盤システムー-- </mat-option>
-              <mat-option value="option1">管理者</mat-option>
-              <mat-option value="option2">イノベーション名１</mat-option>
-            </mat-select>
-            <mat-hint align="end">例：イノベーション</mat-hint>
-          </mat-form-field>
-            <mat-form-field>
-              <input matInput placeholder="ユーザーID" formControlName="user_id">
-            </mat-form-field>
-            <mat-form-field>
-              <input matInput type="password" placeholder="パスワード" formControlName="password">
-            </mat-form-field>
-            <button mat-stroked-button color="primary" type="submit">ログイン</button>
+      <form fxLayoutAlign="stretch" fxLayout ="column" class="login-form" [formGroup]="formGroup" (ngSubmit)="loginProcess()">
+        <mat-form-field>
+          <input matInput placeholder="グループID" formControlName="group_id">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="ユーザーID" formControlName="username">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="password" placeholder="パスワード" formControlName="password">
+        </mat-form-field>
+        <button mat-stroked-button color="primary" type="submit">ログイン</button>
       </form>
       <mat-card-footer fxLayoutAlign="end">
         さくら情報システム株式会社
@@ -29,3 +21,21 @@
   </mat-card>
 
 </div>
+        <!-- <form fxLayoutAlign="stretch" fxLayout ="column" class="login-form" [formGroup]="formGroup" 
+        (ngSubmit)="loginProcess()"> -->
+          <!-- <mat-form-field appearance="fill">
+            <mat-label>グループID</mat-label>
+            <mat-select>
+              <mat-option> --選択してくださいー-- </mat-option>
+              <mat-option value="option1">管理者</mat-option>
+              <mat-option value="option2">イノベーション名１</mat-option>
+            </mat-select>
+          </mat-form-field> -->
+          <!-- <mat-form-field appearance="fill">
+            <mat-label>業務名</mat-label>
+            <mat-select>
+              <mat-option> --選択してください-- </mat-option>
+              <mat-option value="option1">業務名1</mat-option>
+              <mat-option value="option2">業務名2</mat-option>
+            </mat-select>
+          </mat-form-field> -->

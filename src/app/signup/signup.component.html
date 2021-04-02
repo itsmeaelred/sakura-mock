@@ -1,0 +1,53 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card class = "signup" fxFlex="50" *ngIf="!successfullySignup">   
+        <mat-toolbar color="primary">
+            <span>下記項目に入力してください。</span>
+        </mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout ="column" class="signup-form" [formGroup]="signupForm" 
+          (ngSubmit)="onSubmitSignup(signupForm.value)">
+            <mat-form-field>
+                <input matInput placeholder="グループ名" formControlName="group_name">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="グループID" formControlName="group_id">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="業務ID" formControlName="service_id">
+            </mat-form-field>        
+            <mat-form-field>
+                <input matInput placeholder="ユーザーID" formControlName="username">
+            </mat-form-field>        
+            <mat-form-field>
+                <input matInput type="email" placeholder="メールアドレス" formControlName="email">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="password" placeholder="パスワード" formControlName="password">
+            </mat-form-field>
+
+            <button mat-stroked-button color="primary" type="submit">登録する</button>
+        </form>
+        <mat-card-footer fxLayoutAlign="end">
+          さくら情報システム株式会社
+        </mat-card-footer>
+    </mat-card>
+
+    <mat-card class = "confirmation" fxFlex="50" *ngIf="successfullySignup">   
+        <mat-toolbar color="primary">
+            <span>メールを送りました。メールに確認して、コードを入力してください</span>
+        </mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout ="column" class="confirmation-form" [formGroup]="confirmationForm" 
+          (ngSubmit)="onSubmitConfirmation(confirmationForm.value)">
+            <mat-form-field>
+                <input matInput placeholder="ユーザーID" formControlName="username">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="検証コード" formControlName="confirmationCode">
+            </mat-form-field>
+            <button mat-stroked-button color="primary" type="submit">確認する</button>
+        </form>
+        <mat-card-footer fxLayoutAlign="end">
+          さくら情報システム株式会社
+        </mat-card-footer>
+    </mat-card>
+
+</div>

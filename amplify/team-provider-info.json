@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-sakuramock-dev-105028-authRole",
+      "UnauthRoleArn": "arn:aws:iam::127265140501:role/amplify-sakuramock-dev-105028-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::127265140501:role/amplify-sakuramock-dev-105028-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-sakuramock-dev-105028-deployment",
+      "UnauthRoleName": "amplify-sakuramock-dev-105028-unauthRole",
+      "StackName": "amplify-sakuramock-dev-105028",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:127265140501:stack/amplify-sakuramock-dev-105028/4f8608e0-90fa-11eb-8d87-0e76457f505d",
+      "AmplifyAppId": "dakve85783g11"
+    },
+    "categories": {
+      "auth": {
+        "sakuramockf366f5b3": {}
+      }
+    }
+  }
+}

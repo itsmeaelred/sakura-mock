@@ -16,12 +16,15 @@ import {MatSelectModule} from '@angular/material/select';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
+import { SignupComponent } from './signup/signup.component';
+import { AuthServiceService } from './auth-service.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,9 +39,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatSelectModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AmplifyUIAngularModule
   ],
   providers: [
+    AuthServiceService,
+    AuthGuard
     // AuthGuard, 
     // {
     //   provide: HTTP_INTERCEPTORS,
@@ -48,4 +54,5 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
